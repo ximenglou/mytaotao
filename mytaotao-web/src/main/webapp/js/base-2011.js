@@ -581,7 +581,8 @@ pannel.gotop = {settings: {element: null,target: "#header"},init: function(a, b)
     return a
 };
 var loguri = "http://csc.jd.com/log.ashx?type1=$type1$&type2=$type2$&data=$data$&pin=$pin$&referrer=$referrer$&callback=?";
-callback1 = function() {
+//noinspection JSAnnotator
+ callback1 = function() {
 }, log = function(a, b) {
     var c = "";
     for (i = 2; i < arguments.length; i++)
