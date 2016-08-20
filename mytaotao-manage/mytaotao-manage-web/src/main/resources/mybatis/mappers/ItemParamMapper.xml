@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mytaotao.manage.mapper.ItemParamMapper">
+    <select id="selectAllWithItemCatName" resultType="ItemParam">
+        SELECT tb_item_param.updated AS UPDATED,
+               tb_item_param.id AS ID,
+               tb_item_param.created AS CREATED,
+               tb_item_param.param_data AS PARAMDATA,
+               tb_item_param.item_cat_id AS ITEMCATID,
+                tb_item_cat.name AS itemcatname
+        FROM tb_item_param,tb_item_cat
+        WHERE tb_item_param.item_cat_id=tb_item_cat.id
+    </select>
+</mapper>
+
+<!--SELECT tb_item_param.updated AS UPDATED,
+            tb_item_param.id AS ID,
+            tb_item_param.created AS CREATED,
+            tb_item_param.param_data AS PARAMDATA,
+            tb_item_param.item_cat_id AS ITEMCATID
+            FROM tb_item_param,tb_item_cat
+            WHERE tb_item_param.item_cat_id=tb_item_cat.id-->
